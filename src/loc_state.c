@@ -7,6 +7,7 @@ t_fpos *get_istate(t_input *i)
 
 	ret = calloc(1, sizeof(*ret));
 	ret->pos = i->cursor - i->buffer;
+	ret->line = 1;
 	j = 0;
 	while (j < ret->pos)
 	{
